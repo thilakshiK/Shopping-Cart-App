@@ -1,6 +1,6 @@
-const colors = ["red", "blue", "green"];
+const person1 = { name: "thil" };
+const person2 = { job: "doctor" };
 
-const items = colors.map(color => `<li>${color}</li>`);
+console.log({ ...person1, ...person2, address: "SL" });
 
-console.log(items);
-console.log(colors);
+console.log({ ...person1 });
