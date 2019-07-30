@@ -1,2 +1,6 @@
-const x = number => number;
-console.log(x(5));
+const colors = ["red", "blue", "green"];
+
+const items = colors.map(color => `<li>${color}</li>`);
+
+console.log(items);
+console.log(colors);
