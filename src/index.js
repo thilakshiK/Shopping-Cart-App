@@ -1,6 +1,4 @@
-const person1 = { name: "thil" };
-const person2 = { job: "doctor" };
+import { Teacher } from "./teacher";
 
-console.log({ ...person1, ...person2, address: "SL" });
-
-console.log({ ...person1 });
+const teacher = new Teacher("thil", "CSE");
+console.log(teacher.name);
