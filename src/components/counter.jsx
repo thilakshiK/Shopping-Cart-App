@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  //counter component
+  //counter  component
 
   //state = {  }
   render() {
-    return <h1>Hello World</h1>;
+    return (
+      <React.Fragment>
+        <h1>Hello World</h1>
+        <button>Increment</button>
+      </React.Fragment>
+    );
   }
 }
 
