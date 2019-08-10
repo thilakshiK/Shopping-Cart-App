@@ -6,6 +6,7 @@ class Counter extends Component {
   //state = {  }
   render() {
     return (
+      //used instead of <div></div>
       <React.Fragment>
         <h1>Hello World</h1>
         <button>Increment</button>
