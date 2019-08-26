@@ -3,31 +3,42 @@ import React, { Component } from "react";
 class Counter extends Component {
   //counter  component
 
-  state = {
-    count: 0
-  }; //includes data needed by Counter component
-
   styles = {
-    fontSize: 30,
-    fontWeight: "bald"
+    fontSize: 20,
+    fontWeight: "bald",
+    position: "relative"
   };
+
+  //arrow functions have access to "this" keyword
 
   render() {
     return (
       //used instead of <div></div>
-      <React.Fragment>
-        <span style={this.styles} className="badge badge-primary m-2">
+      <div>
+        <span style={this.styles} className="badge badge-primary m-3">
           {this.formatCount()}
         </span>
 
-        <button className="btn btn-dark btn-sm m-2">Increment</button>
-      </React.Fragment>
+        <button
+          onClick={() => this.props.increment(this.props.counter)}
+          className="btn btn-dark btn-lg m-2"
+        >
+          Increment
+        </button>
+
+        <button
+          onClick={() => this.props.delete(this.props.counter.id)}
+          className="btn btn-danger btn-lg m-2"
+        >
+          Delete
+        </button>
+      </div>
     );
   }
 
   formatCount() {
-    const { count } = this.state; //object destructuring
-    return count == 0 ? "zero" : count;
+    const { value } = this.props.counter; //object destructuring
+    return value === 0 ? "zero" : value;
   }
 }
 
